@@ -1,0 +1,24 @@
+{% extends ngbm.pageLayoutTemplate %}
+
+{% block layout %}
+    <div class="zone-layout-wsc-layout">
+
+        <div class="main-content-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <section class="zone zone-left">
+                            {% ngbm_render_zone ngbm.layout.zone('left') %}
+                        </section>
+                    </div>
+                    <div class="col-lg-6">
+                        <section class="zone zone-right">
+                            {% ngbm_render_zone ngbm.layout.zone('right') %}
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+layout_types:
+    wsc_layout:
+        name: 'WSC layout'
+        icon: '/bundles/netgenblockmanagerstandard/images/layout_types/layout_1.svg'
+        zones:
+            left:
+                name: 'Left'
+            right:
+                name: 'Right'
+
+view:
+    layout_view:
+        default:
+            wsc_layout:
+                match:
+                    layout\type: wsc_layout
+                template:
+                    '@ngbm/layout/wsc_layout.html.twig'
+        api:
+            wsc_layout:
+                match:
+                    layout\type: wsc_layout
+                template:
+                    '@NetgenWebSummerCamp/ngbm/api/layout/wsc_layout.html.twig'
