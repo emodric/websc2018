@@ -1,0 +1,15 @@
+{% extends '@ngbm/block/block.html.twig' %}
+
+{% block content %}
+    {% set content = block.dynamicParameter('content') %}
+
+    {% if content is not empty %}
+        <h3>Tags for "{{ ez_content_name(block.dynamicParameter('content')) }}":</h3>
+
+        {% for tag in block.dynamicParameter('tags') %}
+            <p><a href="{{ path(tag) }}">{{ tag.keyword }}</a></p>
+        {% else %}
+            <p>No tags</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

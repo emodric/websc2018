@@ -1,3 +1,10 @@
 parameters:
 
 services:
+    wsc.block_handler.tags:
+        class: Netgen\Bundle\WebSummerCampBundle\Block\TagsBlockHandler
+        public: false
+        arguments:
+            - "@ezpublish.api.service.content"
+        tags:
+            - { name: netgen_block_manager.block.block_definition_handler, identifier: tags }

@@ -28,6 +28,7 @@ final class NetgenWebSummerCampExtension extends Extension implements PrependExt
     {
         $prependConfigs = [
             'layouts.yml' => 'netgen_block_manager',
+            'blocks.yml' => 'netgen_block_manager',
         ];
 
         foreach (array_reverse($prependConfigs) as $configFile => $prependConfig) {

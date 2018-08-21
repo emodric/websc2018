@@ -1,0 +1,20 @@
+block_definitions:
+    tags:
+        name: 'Content tags'
+        view_types:
+            tags:
+                name: 'Content tags'
+
+view:
+    block_view:
+        default:
+            tags:
+                match:
+                    block\definition: tags
+                    block\view_type: tags
+                template: '@ngbm/block/tags.html.twig'
+        api:
+            tags:
+                match:
+                    block\definition: tags
+                template: '@NetgenWebSummerCamp/ngbm/api/block/tags.html.twig'
