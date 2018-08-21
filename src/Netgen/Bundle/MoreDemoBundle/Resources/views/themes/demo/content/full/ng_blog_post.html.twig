@@ -32,7 +32,7 @@
                             By
                             {% for author_location_id in content.fields.authors.value.destinationLocationIds %}
                                 <a href="{{ path('ez_urlalias', {locationId: author_location_id}) }}" class="article-author">{{ ngmore_location_name(author_location_id) }}</a>
-                            {% endfor %} -
+                            {% endfor %} –
                         {% endif %}
                         <time>{{ content.contentInfo.publishedDate.date|date('F jS, Y') }}</time>
                     </div>
@@ -82,18 +82,6 @@
                     </div>
                 {% endblock %}
 
-                <div class="full-article-footer">
-                    {% block newsletter %}
-                        <div class="full-page-newsletter-box">
-                            <h3>Want more posts like this?</h3>
-                            <p>Stay tuned with the weekly recap</p>
-                            <form action="POST">
-                                <input type="text" class="form-control" placeholder="Enter your e-mail">
-                                <button class="btn btn-dark" type="submit">Subscribe</button>
-                            </form>
-                        </div>
-                    {% endblock %}
-                </div>
             </div>
         </div>
     </article>
