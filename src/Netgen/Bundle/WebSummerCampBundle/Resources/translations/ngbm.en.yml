@@ -1,2 +1,5 @@
 block.tags.content: 'eZ content'
 block.tags.limit: 'No. of tags'
+
+query.wsc_query.text: 'Text'
+query.wsc_query.sort: 'Sort'

@@ -8,3 +8,11 @@ services:
             - "@ezpublish.api.service.content"
         tags:
             - { name: netgen_block_manager.block.block_definition_handler, identifier: tags }
+
+    wsc.query_type_handler.search:
+        class: Netgen\Bundle\WebSummerCampBundle\Query\SearchHandler
+        public: false
+        arguments:
+            - "@ezpublish.api.service.search"
+        tags:
+            - { name: netgen_block_manager.collection.query_type_handler, type: wsc_query }

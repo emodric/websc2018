@@ -1,0 +1,3 @@
+query_types:
+    wsc_query:
+        name: 'WSC query'
