@@ -22,3 +22,9 @@ services:
             - "@ezpublish.api.service.search"
         tags:
             - { name: netgen_block_manager.collection.query_type_handler, type: wsc_query }
+
+    wsc.block_plugin.align:
+        class: Netgen\Bundle\WebSummerCampBundle\Block\Plugin\AlignPlugin
+        public: false
+        tags:
+            - { name: netgen_block_manager.block.block_definition_handler.plugin }

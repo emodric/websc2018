@@ -1,0 +1,18 @@
+{% extends '@ngbm/block/block.html.twig' %}
+
+{% import '@NetgenBlockManager/parts/macros.html.twig' as macros %}
+
+{% set align = false %}
+{% if block.parameter('wsc:align').value == 'left' %}
+    {% set align = 'justify-content-start' %}
+{% elseif block.parameter('wsc:align').value == 'center' %}
+    {% set align = 'justify-content-center' %}
+{% elseif block.parameter('wsc:align').value == 'right' %}
+    {% set align = 'justify-content-end' %}
+{% endif %}
+
+{% block content %}
+    <div{% if align is not empty %} class="row {{ align }}"{% endif %}>
+        {{ macros.inline_template(block.parameter('content').value, _context)|nl2br }}
+    </div>
+{% endblock %}
