@@ -9,6 +9,12 @@ services:
         tags:
             - { name: netgen_block_manager.block.block_definition_handler, identifier: tags }
 
+    wsc.container_handler.my_container:
+        class: Netgen\Bundle\WebSummerCampBundle\Block\ContainerBlockHandler
+        public: false
+        tags:
+        - { name: netgen_block_manager.block.block_definition_handler, identifier: wsc_container }
+
     wsc.query_type_handler.search:
         class: Netgen\Bundle\WebSummerCampBundle\Query\SearchHandler
         public: false

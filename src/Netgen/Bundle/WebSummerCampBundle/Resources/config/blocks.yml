@@ -5,6 +5,12 @@ block_definitions:
             tags:
                 name: 'Content tags'
 
+    wsc_container:
+        name: 'WSC container'
+        view_types:
+            wsc_container:
+                name: 'WSC container'
+
 view:
     block_view:
         default:
@@ -13,8 +19,17 @@ view:
                     block\definition: tags
                     block\view_type: tags
                 template: '@ngbm/block/tags.html.twig'
+            wsc_container:
+                match:
+                    block\definition: wsc_container
+                    block\view_type: wsc_container
+                template: '@ngbm/block/wsc_container.html.twig'
         api:
             tags:
                 match:
                     block\definition: tags
                 template: '@NetgenWebSummerCamp/ngbm/api/block/tags.html.twig'
+            wsc_container:
+                match:
+                    block\definition: wsc_container
+                template: '@NetgenWebSummerCamp/ngbm/api/block/wsc_container.html.twig'

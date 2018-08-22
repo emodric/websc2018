@@ -1,0 +1,18 @@
+{% extends '@ngbm/block/block.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            {{ ngbm_render_placeholder(block, 'left') }}
+        </div>
+        <div class="col-md-6">
+            {{ ngbm_render_placeholder(block, 'right') }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            {{ ngbm_render_placeholder(block, 'bottom') }}
+        </div>
+    </div>
+{% endblock %}
