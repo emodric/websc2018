@@ -10,6 +10,10 @@ block_definitions:
         view_types:
             wsc_container:
                 name: 'WSC container'
+    text:
+        view_types:
+            red_text:
+                name: 'Red text'
 
 view:
     block_view:
@@ -24,6 +28,11 @@ view:
                     block\definition: wsc_container
                     block\view_type: wsc_container
                 template: '@ngbm/block/wsc_container.html.twig'
+            text\red:
+                match:
+                    block\definition: text
+                    block\view_type: red_text
+                template: '@ngbm/block/text/red_text.html.twig'
         api:
             tags:
                 match:
