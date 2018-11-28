@@ -50,10 +50,6 @@ the correct database connection for the site.
 
 ### Generate frontend assets
 
-If you're setting up the site in development environment, you will need to
-generate frontend assets (`app.css` & `app.js`) with Webpack Encore since
-they are not part of the repo (as opposed to production versions of the assets).
-
 Run the following to generate development versions of the assets:
 
 ```
@@ -61,9 +57,17 @@ yarn install
 yarn build:dev
 ```
 
+or to build production versions of the assets:
+
+```
+yarn install
+yarn build:prod
+```
+
 ### Import database schema and demo data
 
-Run the following command to import database schema and demo data:
+Run the following command to import database schema and demo data (add `--env=prod`
+after `bin/console` if running in prod mode):
 
 ```
 php bin/console ezplatform:install <SITE_NAME>

@@ -88,13 +88,13 @@ final class AppKernel extends Kernel
         $bundles[] = new Netgen\TagsBundle\NetgenTagsBundle();
         $bundles[] = new Netgen\Bundle\EnhancedSelectionBundle\NetgenEnhancedSelectionBundle();
         $bundles[] = new Netgen\Bundle\SiteAccessRoutesBundle\NetgenSiteAccessRoutesBundle();
-        $bundles[] = new Netgen\Bundle\MoreGeneratorBundle\NetgenMoreGeneratorBundle();
-        $bundles[] = new Netgen\Bundle\MoreInstallerBundle\NetgenMoreInstallerBundle();
-        $bundles[] = new Netgen\Bundle\MoreBundle\NetgenMoreBundle();
+        $bundles[] = new Netgen\Bundle\SiteGeneratorBundle\NetgenSiteGeneratorBundle();
+        $bundles[] = new Netgen\Bundle\SiteInstallerBundle\NetgenSiteInstallerBundle();
+        $bundles[] = new Netgen\Bundle\SiteBundle\NetgenSiteBundle();
         $bundles[] = new Netgen\Bundle\RichTextDataTypeBundle\NetgenRichTextDataTypeBundle();
         $bundles[] = new Netgen\Bundle\EzPlatformSiteApiBundle\NetgenEzPlatformSiteApiBundle();
         $bundles[] = new Netgen\Bundle\AdminUIBundle\NetgenAdminUIBundle();
-        $bundles[] = new Netgen\Bundle\MoreLegacyBundle\NetgenMoreLegacyBundle();
+        $bundles[] = new Netgen\Bundle\SiteLegacyBundle\NetgenSiteLegacyBundle();
         $bundles[] = new Netgen\Bundle\InformationCollectionBundle\NetgenInformationCollectionBundle();
         $bundles[] = new Netgen\Bundle\EzPlatformSearchExtraBundle\NetgenEzPlatformSearchExtraBundle();
 
@@ -108,7 +108,7 @@ final class AppKernel extends Kernel
         $bundles[] = new Netgen\Bundle\EzPublishBlockManagerBundle\NetgenEzPublishBlockManagerBundle();
         $bundles[] = new Netgen\Bundle\SiteAPIBlockManagerBundle\NetgenSiteAPIBlockManagerBundle();
 
-        $bundles[] = new Netgen\Bundle\MoreDemoBundle\NetgenMoreDemoBundle();
+        $bundles[] = new AppBundle\AppBundle();
         $bundles[] = new Netgen\Bundle\WebSummerCampBundle\NetgenWebSummerCampBundle();
 
         return $bundles;
